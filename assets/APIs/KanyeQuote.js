@@ -20,6 +20,6 @@ $(".kanyeBtn").click(function(){
         console.log(response)
         var kanyeQuote = response
 
-        $("#kanyeDiv").prepend(response.quote)
+        $("#kanyeDiv").prepend(response.quote + "<br>")
     })
 })
