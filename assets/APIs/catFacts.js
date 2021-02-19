@@ -27,6 +27,5 @@ $.ajax({
     console.log("le arrray",catFactsArr)
 
 
-
-    // $("#catDiv").prepend(response + "<br>")
+    $("#catDiv").prepend(catFactsArr + "<br>")
 })
