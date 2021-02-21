@@ -10,7 +10,6 @@ $("#catDiv").append(button)
 
 
 
-
 $.ajax({
     url: "https://cat-fact.herokuapp.com/facts",
     method: "GET"
@@ -22,10 +21,31 @@ $.ajax({
         
         var catFacts = response[i].text
         console.log("catfacts response",response[i].text)
-        catFactsArr.push(catFacts)
+        catFactsArr.push(catFacts, "<br>")
     }
-    console.log("le arrray",catFactsArr)
+    // console.log("le arrray",catFactsArr)
 
 
     $("#catDiv").prepend(catFactsArr + "<br>")
+})
+
+
+// var apiKey = "c8a4f62e-0bd4-4f64-8c9b-8717e29bd776"
+
+$.ajax({
+    url: "https://api.thecatapi.com/v1/images/search",
+    method: "GET"
+}).then(function(response){
+    console.log("this be the cat pics", response[0].url)
+
+    // var img = document.createElement("<img src="+ response[0].url+ " alt='cat img'>")
+    function makeImage() { 
+           console.log("this be working");
+           var img = document.createElement('img'); 
+            img.src =  response[0].url; 
+            document.getElementById('catDiv').appendChild(img);   
+    }  
+    makeImage()
+
+    // $("#catDiv").prepend(img)
 })
