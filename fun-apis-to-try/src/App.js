@@ -2,6 +2,8 @@ import './App.css';
 import Nav from "./components/Nav/Nav"
 import ApiCards from "./components/card/card"
 import CatFacts from "./Apis/catFacts"
+import BottomTab from "./components/BottomTab/BottomTab"
+
 
 function App() {
   return (
@@ -15,6 +17,9 @@ function App() {
        
         <ApiCards></ApiCards>
         <CatFacts></CatFacts>
+        <ApiCards></ApiCards>
+        <ApiCards></ApiCards>
+        <BottomTab></BottomTab>
         
       </header>
     </div>
