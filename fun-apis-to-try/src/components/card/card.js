@@ -4,7 +4,7 @@ import "./card.css";
 function ApiCards(){
     return(
         <div className='apiCard'>
-        <p>here is a card that will look super nice and professional</p>
+        <p>here is a card that will look super nice and professional </p>
         </div>
     )
 }

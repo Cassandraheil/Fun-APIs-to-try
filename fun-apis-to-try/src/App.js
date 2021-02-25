@@ -1,6 +1,7 @@
 import './App.css';
 import Nav from "./components/Nav/Nav"
 import ApiCards from "./components/card/card"
+import CatFacts from "./Apis/catFacts"
 
 function App() {
   return (
@@ -11,10 +12,8 @@ function App() {
         <p>
           Ehello World
         </p>
-        <ApiCards></ApiCards>
-        <ApiCards></ApiCards>
-        <ApiCards></ApiCards>
-        <ApiCards></ApiCards>
+       
+        <ApiCards><CatFacts></CatFacts></ApiCards>
 
         
       </header>
