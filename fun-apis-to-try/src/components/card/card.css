@@ -1,0 +1,30 @@
+.apiCard{
+    /* background-color: lightblue; */
+    padding: 20px;
+    border: 4px solid gold;
+    height: auto;
+
+}
+
+.cardText {
+    color: turquoise;
+}
+
+.cardInfo {
+    display: inline-block;
+    width: 500px;
+    margin: 20px;
+}
+
+.cardBtn {
+    color: black;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cardImg {
+    height: auto;
+    width: 400px;
+    display: inline-block;
+    margin: 20px;
+}

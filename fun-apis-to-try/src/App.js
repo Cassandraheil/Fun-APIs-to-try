@@ -8,13 +8,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Nav></Nav>
-        <img src="https://expertphotography.com/wp-content/uploads/2011/06/how-to-take-good-pictures-waterlilly.jpg" className="App-logo" alt="logo" />
+        <img src="https://image.freepik.com/free-vector/glowing-circular-background_1035-782.jpg" className="App-logo" alt="logo" />
         <p>
-          Ehello World
+          Get caught in the blackhole of random API's and the seemingly endless data they have
         </p>
        
-        <ApiCards><CatFacts></CatFacts></ApiCards>
-
+        <ApiCards></ApiCards>
+        <CatFacts></CatFacts>
         
       </header>
     </div>
