@@ -1,18 +1,29 @@
 import React from "react";
-import axios from "axios"
 import ApiCards from "../components/card/card"
-import { render } from "react-dom";
 
 class CatFacts extends React.Component {
       
     
 
     render(){
-        let catFacts = axios.get("https://cat-fact.herokuapp.com/facts");
-        return(
+        let catFacts = "hey"
 
+        fetch('https://cat-fact.herokuapp.com/facts')
+        .then(response => response.json())
+        .then(data => 
+            catFacts.replace(data)
+            // console.log("this hall be le data", data[0].text)
+        );
+
+        console.log("dee catfacts", catFacts)
+        return(
         <ApiCards
-            catFacts={catFacts}
+        // {...catFacts.map(catFact =>
+            information={catFacts}
+            pic="https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop"
+            btnText="click to see more kitties!"
+        // )}
+            
             />
         )
     }

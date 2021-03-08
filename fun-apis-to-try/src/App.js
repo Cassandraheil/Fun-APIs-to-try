@@ -1,9 +1,8 @@
 import './App.css';
 import Nav from "./components/Nav/Nav"
-import ApiCards from "./components/card/card"
 import CatFacts from "./Apis/catFacts"
 import BottomTab from "./components/BottomTab/BottomTab"
-
+import KayneQuotes from "./Apis/KanyeQuote"
 
 function App() {
   return (
@@ -15,9 +14,9 @@ function App() {
           Get caught in the blackhole of random API's and the seemingly endless data they have
         </p>
        
-        <CatFacts></CatFacts>
-
-        <BottomTab></BottomTab>
+        <CatFacts/>
+        <KayneQuotes/>
+        <BottomTab/>
         
       </header>
     </div>
