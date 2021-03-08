@@ -1,13 +1,17 @@
 import React from 'react';
 import "./card.css";
 
-function ApiCards(){
+function ApiCards(props){
+    console.log("props hopefully", props.catFacts)
+    console.log("Promise.probs", Promise.props)
     return(
         // this will be {{background: {props}}}
         <div className='apiCard' style={{background: "blue"}}>
             <div className="cardInfo">
-                <p className="cardText">this shall be information from the api's, ok but now we will see what happens when there is a lot of text in here and see just how that looks instead
+                <p className="cardText">
                 {/* class="btn btn-{props}">{props} */}
+                this should be props:
+                {/* {props.catFacts} */}
                 <button type="button" className="cardBtn btn-info">Click for Kayne's words of wisdom</button></p>
             </div>
             {/* the src will be props soon enough */}

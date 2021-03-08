@@ -15,10 +15,8 @@ function App() {
           Get caught in the blackhole of random API's and the seemingly endless data they have
         </p>
        
-        <ApiCards></ApiCards>
         <CatFacts></CatFacts>
-        <ApiCards></ApiCards>
-        <ApiCards></ApiCards>
+
         <BottomTab></BottomTab>
         
       </header>

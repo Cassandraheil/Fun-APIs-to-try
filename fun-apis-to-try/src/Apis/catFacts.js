@@ -1,52 +1,70 @@
 import React from "react";
-
+import axios from "axios"
+import ApiCards from "../components/card/card"
+import { render } from "react-dom";
 
 class CatFacts extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: null,
-            isLoaded: false,
-            items: []
-        };
-    }
-
-
-    componentDidMount(){
-        fetch("https://cat-fact.herokuapp.com/facts")
-        .then(res => res.json())
-        .then((result) => {
-            this.setState({
-                isLoaded: true,
-                items: result.items
-            });
-        },
-        (error) => {
-            this.setState({
-                isLoaded: true,
-                error
-            });
-        })
-    }
-
+      
+    
 
     render(){
-        const {error, isLoaded, items } = this.state;
-        if (error) {
-            return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
-            return <div> Loading....</div>;
-        } else {
-            return (      
-                <div>  
-                    <h3>this will pass some cat facts when I get it working{items}</h3>
-                </div>
-            );
-        }
+        let catFacts = axios.get("https://cat-fact.herokuapp.com/facts");
+        return(
+
+        <ApiCards
+            catFacts={catFacts}
+            />
+        )
     }
 }
 
-export default CatFacts;
+
+export default CatFacts
+
+
+
+// class CatFacts extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             error: null,
+//             isLoaded: false,
+//             items: []
+//         };
+//     }
+//     componentDidMount(){
+//         fetch("https://cat-fact.herokuapp.com/facts")
+//         .then(res => res.json())
+//         .then((result) => {
+//             this.setState({
+//                 isLoaded: true,
+//                 items: result.items
+//             });
+//         },
+//         (error) => {
+//             this.setState({
+//                 isLoaded: true,
+//                 error
+//             });
+//         })
+//     }
+//     render(){
+//         const {error, isLoaded, items } = this.state;
+//         if (error) {
+//             return <div>Error: {error.message}</div>;
+//         } else if (!isLoaded) {
+//             return <div> Loading....</div>;
+//         } else {
+//             return (      
+//                 <div>  
+//                     <h3>this will pass some cat facts when I get it working{items}</h3>
+//                 </div>
+//             );
+//         }
+//     }
+// }
+
+// export default CatFacts;
 
 
 
@@ -61,7 +79,7 @@ export default CatFacts;
 //     catFactsArr = []
 
 //     for (i = 0; i < response.length; i++) {
-        
+
 //         var catFacts = response[i].text
 //         // console.log("catfacts response",response[i].text)
 //         catFactsArr.push(catFacts, "<br>")
@@ -74,7 +92,7 @@ export default CatFacts;
 
 
 // $(".catFactBtn").click(function(){
-  
+
 //     $.ajax({
 //         url: "https://api.thecatapi.com/v1/images/search",
 //         method: "GET"
